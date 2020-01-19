@@ -1,0 +1,8 @@
+[
+    {"name":"samsung galaxy j8","id":101, "camera":"12 MP (rear camera), 5 MP (front camera)", "cpu":"Dual-core 2.15 GHz Kryo & Dual-core 1.44 GHz Kryo"
+    },
+    {"name":"Motorola Turbo edition","id":102, "camera":"13 MP (rear camera), 5 MP (front camera)", "cpu":"Quad-core Cortex-A53 & Quad-core 1.8 GHz Cortex-A57"
+    },
+    {"name":"Micromax","id":103, "camera":"12 MP (rear camera), 5 MP (front camera)", "cpu":"Quad-core 1.44 GHz Cortex-A53 & dual-core 1.82 GHz Cortex-A57"
+    }
+]
