@@ -83,14 +83,12 @@ class ProductList extends Component {
         console.log(itemSearch, "parent component");
         let { list } = this.state;
         console.log(list);
-        for (let i = 0; i < list.length; i++) {
-            list = list.filter((item) => {
-                var k = item.name.toLowerCase().search(itemSearch.toLowerCase()) !== -1;
-                console.log('kkkkkkkkkkkkkkkkkkkkkkkkkkk', k);
-                return k;
-            });
-            this.setState({ updatedList: list });
-        }
+        list = list.filter((item) => {
+            var k = item.name.toLowerCase().search(itemSearch.toLowerCase()) !== -1;
+            console.log('kkkkkkkkkkkkkkkkkkkkkkkkkkk', k);
+            return k;
+        });
+        this.setState({ updatedList: list });
         this.setState({searchBoxValue: event.target.value});
     }
 
