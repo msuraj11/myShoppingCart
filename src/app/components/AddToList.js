@@ -5,6 +5,7 @@ import { connect } from 'react-redux'; //to connect react&redux
 
 const prolistSelected = (props, productSelected) => {
     props.actions(productSelected);
+    alert(`${productSelected.name} is added to Products`);
 };
 
 const AddToList = props => {

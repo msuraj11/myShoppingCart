@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Product from './Product';
 import axios from 'axios';
-import images from '../images.json';
 import { connect } from 'react-redux'; //to connect react&redux
 //import { bindActionCreators } from 'redux'; //to connect all events
 import * as cartAction from '../actions/cartAction';
@@ -43,7 +42,7 @@ class ProductList extends Component {
         axios.get('https://nodesense.github.io/api/products.json').then( response => {
             const responseData = response && response.data;
             for (var i = 0; i < responseData.length; i++) {
-                Object.assign(responseData[i], images[i]);
+                Object.assign(responseData[i], {img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTkm_GGgo9eDdNNTKH8Oogr_JEA1-kb3CCV_q_Suqu0n-q6h10F'});
             }
             this.setState({ list: responseData });
         });
@@ -75,6 +74,7 @@ class ProductList extends Component {
         console.log("cart selected method of productlist.js", this.props)
         //console.log(productSelected);
         this.props.actions(productSelected);
+        alert(`${productSelected.name} added to your wish-list`);
     }
 
 

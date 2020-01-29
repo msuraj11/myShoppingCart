@@ -26,6 +26,7 @@ class Cart extends Component {
 
     removeToCart = (item) => {
         this.props.actionForDelete(item.id);
+        alert(`Are you sure, you want to remove ${item.name} from wish-list?`);
     };
     
     emptyCart = () => {
