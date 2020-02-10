@@ -9,11 +9,11 @@ export const addToCart = (item) => {
     };
 };
 
-export const removeToCart = (id) => {
+export const removeToCart = (uniqueId) => {
     return dispatch => {
         dispatch({
             type: actionTypes.REMOVE_FROM_CART,
-            id
+            uniqueId
         });
     };
 };
